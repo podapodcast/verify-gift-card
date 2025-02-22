@@ -6,8 +6,9 @@
     <title>Gift Card Verification</title>
     <style>
         body {
-            background: #f4f4f9;
+            background: #1e1e2f;
             font-family: Arial, sans-serif;
+            color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,27 +17,39 @@
             padding: 20px;
         }
         .verification-container {
-            background: #fff;
+            background: #2c2c3c;
             padding: 20px 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             width: 100%;
             max-width: 400px;
+            text-align: center;
         }
-        .verification-container h2 {
-            color: #333;
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
             margin-bottom: 20px;
         }
-        .verification-container input[type="text"] {
+        .image-grid img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #444;
             border-radius: 5px;
+            background: #3b3b4f;
+            color: #fff;
             font-size: 16px;
         }
-        .verification-container button {
+        button {
             background: #4CAF50;
             color: white;
             border: none;
@@ -46,7 +59,7 @@
             font-size: 16px;
             transition: background 0.3s;
         }
-        .verification-container button:hover {
+        button:hover {
             background: #45a049;
         }
         .message {
@@ -70,6 +83,10 @@
 </head>
 <body>
     <div class="verification-container">
+        <div class="image-grid">
+            <img src="assets/image1.png" alt="Image 1">
+            <img src="assets/image2.jpg" alt="Image 2">
+        </div>
         <h2>Verify Your Gift Card</h2>
         <input type="text" id="giftCardInput" placeholder="Enter your gift card number" />
         <button onclick="verifyGiftCard()">Verify</button>
